@@ -218,6 +218,63 @@ export default function Projects() {
               </div>
             )}
           </div>
+
+          <div
+            className="relative w-full md:w-1/2 lg:w-1/4"
+            onMouseEnter={() => handleMouseEnter(6)}
+            onMouseLeave={() => handleMouseLeave(6)}
+          >
+            <img
+              className={`rounded-lg object-cover w-full h-full transition duration-300 ease-in-out transform hover:scale-105 ${
+                hoverStates[6] ? "filter blur-lg" : ""
+              }`}
+              src="/Cohort-retort.png"
+              alt="cohort-retort"
+            />
+            {hoverStates[6] && (
+              <div className=" absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center opacity-100 transition-opacity">
+                <a
+                  href="https://cohort-retort-v1-3ead1d24c761.herokuapp.com"
+                  target="_blank"
+                  alt="cohortapp"
+                  rel="noreferrer"
+                >
+                  <h2 className=" bg-transparent text-4xl font-bold text-white drop-shadow-2xl">
+                    COHORT-RETORT/
+                    <span className="text-purple-500">FULLSTACK</span>
+                  </h2>
+                </a>
+              </div>
+            )}
+          </div>
+          <div
+            className="relative w-full md:w-1/2 lg:w-1/4"
+            onMouseEnter={() => handleMouseEnter(7)}
+            onMouseLeave={() => handleMouseLeave(7)}
+          >
+            <img
+              className={`rounded-lg object-cover w-full h-full transition duration-300 ease-in-out transform hover:scale-105 ${
+                hoverStates[7] ? "filter blur-lg" : ""
+              }`}
+              src="/OsPortfolio.png"
+              alt="first-portfolio"
+            />
+            {hoverStates[7] && (
+              <div className=" absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center opacity-100 transition-opacity">
+                <a
+                  href="https://cohort-retort-v1-3ead1d24c761.herokuapp.com"
+                  target="_blank"
+                  alt="cohortapp"
+                  rel="noreferrer"
+                >
+                  <h2 className=" bg-transparent text-4xl font-bold text-white drop-shadow-2xl">
+                    FIRST-PORTFOLIO/
+                    <span className="text-cyan-400">FRONT-END</span>
+                  </h2>
+                </a>
+              </div>
+            )}
+          </div>
         </div>
       </div>
       <Footer />
