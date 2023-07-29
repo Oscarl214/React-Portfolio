@@ -9,7 +9,7 @@
 
 - Includes my name, short title, and my nav bar with functioning menu items that take the user to their respective path.
 
-### Work Section
+### Portfolio Section
 
 - Projects I have completed.
 
