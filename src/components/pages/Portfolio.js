@@ -2,6 +2,9 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Footer from "../Footer";
 
+
+import ProjectCard from "../ProjectCard";
+
 export default function Projects() {
   const [hoverStates, setHoverStates] = useState(Array(4).fill(false));
 
@@ -40,6 +43,9 @@ export default function Projects() {
 
   return (
     <div className="bg-gradient-to-b from-blue-600 to-lime-200 min-h-screen ">
+      <div>
+        <ProjectCard/>
+      </div>
       <div className="container mx-auto px-4 py-10 max-h-full">
         <h3 className=" text-center animate-pulse text-5xl py-2 text-lime-300 font-medium">
           Portfolio
