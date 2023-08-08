@@ -16,7 +16,7 @@ const Footer = () => {
   });
 
   return (
-    <div className="text-5xl flex justify-center gap-16 py-3 text-white-600 dark:text-white-400 links">
+    <div className="text-5xl flex justify-center gap-16 py-3 text-white-600 dark:text-white-400 links p-7">
       <a
         href="https://www.linkedin.com/in/oscar-l-8371a512a/"
         target="_blank"
