@@ -25,18 +25,18 @@ export default function Projects() {
   });
 
   return (
-    <div className="bg-gradient-to-b from-blue-600 to-lime-200 min-h-screen flex items-center flex-col md:flex-row">
+    <div className=" min-h-screen flex items-center flex-col md:flex-row">
       {currentProject ? null : (
-        <h2 className="absolute top-12 left-1/2 transform -translate-x-1/2 animate-pulse text-5xl py-2 text-teal-600 font-medium dark:text-teal-400 md:text-6xl">
+        <h2 className="absolute top-12 left-1/2 transform -translate-x-1/2 animate-pulse text-5xl py-2 text-lime-500 font-medium dark:text-teal-400 md:text-6xl">
           My Projects
         </h2>
       )}
-      <div className="flex flex-col gap-4 p-11 text-2xl">
+      <div className="flex flex-col gap-4 p-11 text-2xl py-40">
         {projectData.map((project) => (
           <button
             key={project.id}
             onClick={() => handleSetCurrentProject(project.id)}
-            className=" bg-lime-200 hover:bg-blue-400 text-blue font-bold py-2 px-4 border border-blue-700 rounded "
+            className=" bg-lime-400 hover:bg-blue-400 text-blue font-bold py-2 px-4 border border-blue-700 rounded "
           >
             {project.title}
           </button>

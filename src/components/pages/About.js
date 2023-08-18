@@ -24,18 +24,18 @@ import { gsap } from "gsap";
 
 export default function About() {
   return (
-    <div className="text-center p-10 py-10 bg-gradient-to-b from-blue-600 to-lime-200">
-      <h2 className=" animate-pulse text-5xl py-2 text-black dark:text-teal-600 md:text-6xl font-medium ">
+    <div className="text-center py-10">
+      <h2 className=" animate-pulse text-5xl text-lime-500 dark:text-teal-600 md:text-6xl font-medium ">
         O's World
       </h2>
       <div className="mx-auto bg-gradient-to-b from-blue-300-500 rounded-sm w-80 h-100 relative overflow-hidden mt-20 md:h-100 md:w-100 ">
         <img
           src="/GradShot.jpeg"
           alt="myavator"
-          className="w-auto max-h-lg rounded-lg "
+          className=" w-auto max-h-lg rounded-lg "
         />
       </div>
-      <p>
+      <p className="py-4">
         My name is Oscar Leal, and I recently graduated from the University of
         Texas with dual Bachelor of Science degrees in Arts & Entertainment
         Technologies and Corporate Communications. Additionally, I successfully
@@ -44,7 +44,6 @@ export default function About() {
         The bootcamp was an intensive learning experience that taught me how to
         effectively navigate both front-end and back-end technologies.
       </p>
-
       <p>
         Equipped with this knowledge, I am proficient in creating full-stack
         applications. Furthermore, the bootcamp provided valuable opportunities
@@ -60,9 +59,9 @@ export default function About() {
         dynamic environment.
       </p>
 
-      <div className="text-center p-10 py-10 shadow-rose-600/40 ring-2 ring-indigo-600">
+      <div className="text-center p-10 py-10 shadow-rose-600/40 ring-2 ring-lime-600">
         <h2>My SkillSet</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 px-12 py-10 animate-pulse justify-items-center">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 px-12 py-10 animate-pulse justify-items-center ">
           <SiJavascript className="text-yellow-300 text-4xl md:text-8xl" />
           <SiCss3 className="text-blue-300 text-4xl md:text-8xl " />
           <SiHtml5 className="text-red-500 text-4xl md:text-8xl " />

@@ -4,7 +4,7 @@ import Footer from "../Footer";
 
 export default function Contact() {
   return (
-    <div className="bg-gradient-to-b from-blue-600 to-lime-200 min-h-screen ">
+    <div className=" min-h-screen ">
       <Form />
       <Footer />
     </div>
