@@ -4,7 +4,7 @@ import DarkMode from "../components/DarkMode/DarkMode";
 // We assign them to their own variable names
 function NavTabs({ currentPage, handlePageChange }) {
   return (
-    <ul className="nav nav-tabs bg-lime-500 text-white">
+    <ul className="nav nav-tabs bg-lime-500 text-white items-center justify-center">
       <li className="nav-item ">
         <a
           href="#home"

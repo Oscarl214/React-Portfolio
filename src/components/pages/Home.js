@@ -18,8 +18,9 @@ export default function Home() {
   return (
     <div className="text-center p-10 py-10 h-screen w-screen">
       <h2 className=" animate-pulse text-5xl py-2 text-lime-500 font-medium dark:text-teal-400 md:text-6xl">
-        Oscar Leal
+        Hi, my name is <br></br>Oscar Leal
       </h2>
+
       <h3 className="text-2xl py-2 dark:text-white md:text-3xl">
         Software Developer.
       </h3>

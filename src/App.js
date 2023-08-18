@@ -1,9 +1,9 @@
 import React from "react";
 import PortfolioContainer from "./components/PortfolioContainer";
-
+import "./styles/app.css";
 import { useState, useEffect } from "react";
 const App = () => (
-  <div>
+  <div className="App-header">
     <PortfolioContainer />
   </div>
 );
