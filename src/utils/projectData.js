@@ -6,7 +6,7 @@ export const projectData = [
       "Designed a mock e-commerce web page utilizing the power of augmented reality (AR) to showcase three different products for a B2C Company of choice.",
     image:
       "https://portfolioprojectsol.s3.us-east-2.amazonaws.com/WebARProejct.png",
-    link: "",
+    link: "https://yywb1u.csb.app/",
     github: "https://github.com/Oscarl214/WebAR-Project",
     technologies:
       "HTML, CSS, JavaScript, SandBox, Modal Viwer Component npm package",
@@ -37,7 +37,7 @@ export const projectData = [
     id: 4,
     title: "Portfolio",
     description:
-      "My first Portfolio that showcases some of my earlier works. Utilize a free quote api that gives users who visist a boost of joy!",
+      "My first Portfolio that showcases some of my earlier works. Utilize a free quote api that provides a motivational quote for those who visit the site!",
     image:
       "https://portfolioprojectsol.s3.us-east-2.amazonaws.com/OsPortfolio.png",
     link: "https://oscarl214.github.io/O-s_Portfolio/",

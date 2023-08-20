@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../styles/app.css";
 const Form = () => {
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
@@ -69,10 +69,10 @@ const Form = () => {
           onSubmit={handleSubmit}
           className="lg:w-1/2 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0"
         >
-          <h2 className="text-white sm:text-4xl text-3xl mb-1 font-medium title-font">
+          <h2 className=" sm:text-4xl text-3xl mb-1 font-medium title-font">
             Hire Me
           </h2>
-          <p className="leading-relaxed mb-5">
+          <p className="App-text leading-relaxed mb-5">
             Send me a message to connect! I will response as soon as I can!
           </p>
           <input type="hidden" name="form-name" value="contact" />

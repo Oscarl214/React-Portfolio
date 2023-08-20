@@ -10,3 +10,7 @@
 .App-card {
   color: var(--card_color);
 }
+
+.App-text {
+  color: var(--text_color);
+}

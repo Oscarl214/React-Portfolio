@@ -1,15 +1,29 @@
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
 :root {
   --body_background: white;
   --body_color: black;
   --link_color: navy;
   --card_color: black;
+  --text_color: black;
+
+  --clr-1: lime;
+  --clr-2: white;
+  --clr-3: #2d8f85;
+  --clr-4: #429512;
+  --clr-5: #073438;
 }
 
 [data-theme="dark"] {
   --body_background: black;
-  --body-color: white;
+  --body_color: white;
   --link_color: green;
-  --card_color: white;
+  --text_card_color: black;
+  --text_color: white;
 }
 @tailwind base;
 @tailwind components;
@@ -49,4 +63,45 @@ p {
 
 .no-decoration {
   text-decoration: none;
+}
+
+.card {
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.nav-container {
+  position: relative;
+  z-index: 1;
+}
+
+.card::before,
+.card::after {
+  content: "";
+  position: absolute;
+  inset: -0.1rem;
+  z-index: -2;
+  background: conic-gradient(
+    from var(--gradient-angle),
+    var(--clr-1),
+    var(--clr-3),
+    var(--clr-2),
+    var(--clr-3),
+    var(--clr-1)
+  );
+  border-radius: inherit;
+  animation: rotation 10s linear infinite;
+}
+
+.card::after {
+  filter: blur(3.5rem);
+}
+
+@keyframes rotation {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
 }
