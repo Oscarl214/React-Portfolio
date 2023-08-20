@@ -61,7 +61,15 @@ p {
   max-width: 70rem /* 512px */;
 }
 
+.lime-green-bg {
+  background-color: rgb(46, 167, 46);
+}
+
 .no-decoration {
+  text-decoration: none;
+}
+
+.nav-link {
   text-decoration: none;
 }
 
@@ -79,7 +87,7 @@ p {
 .card::after {
   content: "";
   position: absolute;
-  inset: -0.1rem;
+  inset: -0.5rem;
   z-index: -2;
   background: conic-gradient(
     from var(--gradient-angle),

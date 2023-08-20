@@ -1,29 +1,65 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/app.css";
+import { useForm, ValidationError } from "@formspree/react";
+
 const Form = () => {
-  const [name, setName] = React.useState("");
-  const [email, setEmail] = React.useState("");
-  const [message, setMessage] = React.useState("");
+  const [emailValue, setEmailValue] = useState("");
+  const [messageValue, setMessageValue] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
-  function encode(data) {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
+  const [state, handleSubmit] = useForm("xyyqwzvd");
+  if (state.succeeded) {
+    return (
+      <div className="nav-container">
+        <div className=" flex items-center justify-center min-h-screen">
+          <div className="card">
+            <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
+              <h5 class=" decoration-0 mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white ">
+                Successful Submission
+              </h5>
+
+              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                Thank you for reaching Out! I will reply as soon as I can!
+              </p>
+              <a
+                href="../pages/Portfolio"
+                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-lime-400 rounded-lg hover:bg-black focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                Home
+                <svg
+                  class="w-3.5 h-3.5 ml-2"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 14 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M1 5h12m0 0L9 1m4 4L9 9"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
   }
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", name, email, message }),
-    })
-      .then(() => alert("Message sent!"))
-      .catch((error) => alert(error));
-  }
-
+  // const handleFormSubmit = async () => {
+  //   if (emailValue && messageValue) {
+  //     handleSubmit();
+  //   } else {
+  //     setTimeout(() => {
+  //       console.log(
+  //         "Please provide a valid email and message before submitting"
+  //       );
+  //     }, 100);
+  //   }
+  // };
   return (
     <section id="contact" className="relative">
       <div className="container px-5 py-10 mx-auto flex sm:flex-nowrap flex-wrap">
@@ -36,6 +72,7 @@ const Form = () => {
             style={{ filter: "opacity(0.7)" }}
             src="https://www.google.com/maps/embed/v1/place?q=Dallas,+TX,+USA&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
           />
+
           <div className="bg-gray-900 relative flex flex-wrap py-6 rounded shadow-md">
             <div className="lg:w-1/4 px-6">
               <h2 className="title-font font-semibold text-white tracking-widest text-xs">
@@ -70,13 +107,13 @@ const Form = () => {
           className="lg:w-1/2 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0"
         >
           <h2 className=" sm:text-4xl text-3xl mb-1 font-medium title-font">
-            Hire Me
+            Contact Me
           </h2>
           <p className="App-text leading-relaxed mb-5">
             Send me a message to connect! I will response as soon as I can!
           </p>
           <input type="hidden" name="form-name" value="contact" />
-          <div className="relative mb-4">
+          {/* <div className="relative mb-4">
             <label htmlFor="name" className="leading-7 text-lg">
               Name
             </label>
@@ -85,9 +122,8 @@ const Form = () => {
               id="name"
               name="name"
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-              onChange={(e) => setName(e.target.value)}
             />
-          </div>
+          </div> */}
           <div className="relative mb-4">
             <label htmlFor="email" className="leading-7 text-lg">
               Email
@@ -96,8 +132,14 @@ const Form = () => {
               type="email"
               id="email"
               name="email"
+              value={emailValue}
+              onChange={(e) => setEmailValue(e.target.value)}
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-              onChange={(e) => setEmail(e.target.value)}
+            />
+            <ValidationError
+              prefix="Email"
+              field="email"
+              errors={state.errors}
             />
           </div>
           <div className="relative mb-4">
@@ -107,13 +149,20 @@ const Form = () => {
             <textarea
               id="message"
               name="message"
+              value={messageValue}
+              onChange={(e) => setMessageValue(e.target.value)}
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-              onChange={(e) => setMessage(e.target.value)}
+            />
+            <ValidationError
+              prefix="Message"
+              field="message"
+              errors={state.errors}
             />
           </div>
           <button
             type="submit"
             className="text-white bg-lime-400 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+            disabled={state.submitting || !emailValue || !messageValue}
           >
             Submit
           </button>
@@ -122,103 +171,5 @@ const Form = () => {
     </section>
   );
 };
-// return (
-//   <div className="relative flex flex-col justify-center min-h-screen overflow-hidden ">
-//     <div className="w-full p-6 m-auto bg-white rounded-md shadow-xl shadow-rose-600/40 ring-2 ring-indigo-600 lg:max-w-xl">
-//       <h1 className="text-3xl font-semibold text-center text-indigo-700 underline uppercase ">
-//         Contact Form
-//       </h1>
-//       <form className="mt-6">
-//         <div className="mb-2">
-//           <label>
-//             <span className="text-gray-700">Your name</span>
-//             <input
-//               type="text"
-//               name="name"
-//               className="
-
-//           w-full
-//           block px-16 py-2 mt-2
-//           border-gray-300
-//           rounded-md
-//           shadow-sm
-//           focus:border-indigo-300
-//           focus:ring
-//           focus:ring-indigo-200
-//           focus:ring-opacity-50
-//         "
-//               placeholder="John cooks"
-//             />
-//           </label>
-//         </div>
-//         <div className="mb-2">
-//           <label>
-//             <span className="text-gray-700">Email address</span>
-//             <input
-//               name="email"
-//               type="email"
-//               className="
-//           block
-//           w-full
-//           mt-2 px-16 py-2
-//           border-gray-300
-//           rounded-md
-//           shadow-sm
-//           focus:border-indigo-300
-//           focus:ring
-//           focus:ring-indigo-200
-//           focus:ring-opacity-50
-//         "
-//               placeholder="john.cooks@example.com"
-//               required
-//             />
-//           </label>
-//         </div>
-//         <div className="mb-2">
-//           <label>
-//             <span className="text-gray-700">Message</span>
-//             <textarea
-//               name="message"
-//               className="
-//           block
-//           w-full
-//           mt-2 px-16 py-8
-//           border-gray-300
-//           rounded-md
-//           shadow-sm
-//           focus:border-indigo-300
-//           focus:ring
-//           focus:ring-indigo-200
-//           focus:ring-opacity-50
-//         "
-//               rows="5"
-//             ></textarea>
-//           </label>
-//         </div>
-
-//         <div className="mb-6">
-//           <button
-//             type="submit"
-//             className="
-//           h-10
-//           px-5
-//           text-indigo-100
-//           bg-indigo-700
-//           rounded-lg
-//           transition-colors
-//           duration-150
-//           focus:shadow-outline
-//           hover:bg-indigo-800
-//         "
-//           >
-//             Contact Me
-//           </button>
-//         </div>
-//         <div></div>
-//       </form>
-//     </div>
-//   </div>
-//   );
-// };
 
 export default Form;
