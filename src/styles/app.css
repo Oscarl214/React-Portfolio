@@ -14,3 +14,7 @@
 .App-text {
   color: var(--text_color);
 }
+
+.App-link {
+  color: var(--link_color);
+}
