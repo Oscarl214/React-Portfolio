@@ -40,9 +40,17 @@ const imageRef=useRef(null);
   });
 }, []);
 
+useEffect(() => {
+  handleSetBioCard(currentBio.id);
+
+  setTimeout(() => {
+    ref.current.scrollIntoView({ behavior: "smooth" });
+  }, 1000); 
+}, [currentBio]);
+
   return (
-<div className=" pb-8 flex flex-wrap justify-center items-start md:items-center md:pt-12 md:pl-8 min-h-screen">
-  <div className="max-h-full bg-gradient-to-b rounded-sm w-50 h-100 overflow-hidden mt-5 md:mt-20 md:h-100 md:w-100">
+<div className=" pb-8 flex  flex-wrap justify-center items-start md:items-center md:pt-12 md:pl-8 min-h-screen">
+<div className="flex w-full md:w-1/2">
     <img
       ref={imageRef}
       src="/GradShot.jpeg"
@@ -54,9 +62,8 @@ const imageRef=useRef(null);
       }}
     />
   </div>
-<div className="flex-1 cards">
-        <div ref={ref}
-        onLoad={()=>handleSetBioCard}
+  <div className="flex-1 w-full md:w-1/2" ref={ref}>
+        <div
         >
           {currentBio && <BioCard bio={currentBio} />}
         </div>

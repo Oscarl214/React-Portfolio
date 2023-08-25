@@ -30,9 +30,9 @@ const BioCard = ({ bio }) => {
               <h2 className="mb-2 font-medium leading-tight text-black-800 dark:text-black-50 text-2xl text-center">
                 {displaySkills ? "My SkillSet" : "Bio"}
               </h2>
-              <div className={`mb-4 text-2xl text-center ${displaySkills ? "h-auto" : "max-h-60 overflow-y-auto"} App-card`}>
+              <div className={`mb-4 text-2xl text-center max-h-60 overflow-y-auto App-card`}>
                 {displaySkills ? (
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-2 px-12 py-10 animate-pulse justify-items-center ">
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4 px-12 py-10 animate-pulse justify-items-center ">
           <SiJavascript className="text-yellow-300 text-4xl md:text-8xl" />
           <SiCss3 className="text-blue-300 text-4xl md:text-8xl " />
                 <SiHtml5 className="text-red-500 text-4xl md:text-8xl " />
