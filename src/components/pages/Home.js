@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef} from "react";
 import {
   AiOutlineFileText,
   AiFillLinkedin,
@@ -8,6 +8,10 @@ import { gsap } from "gsap";
 import "../../styles/app.css";
 
 export default function Home() {
+
+
+
+  
   useEffect(() => {
     gsap.fromTo(
       ".links",

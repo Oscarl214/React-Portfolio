@@ -1,42 +1,68 @@
-import React, { useEffect } from "react";
-import {
-  SiJavascript,
-  SiCss3,
-  SiHtml5,
-  SiNodedotjs,
-  SiHandlebarsdotjs,
-  SiReact,
-  SiMongodb,
-  SiMongoose,
-  SiMysql,
-  SiSequelize,
-  SiGraphql,
-  SiAmazons3,
-  SiApollographql,
-  SiTailwindcss,
-  SiGit,
-  SiBootstrap,
-  SiAmazonaws,
-  SiExpress,
-} from "react-icons/si";
+import React, { useEffect,useState,useRef } from "react";
 import Footer from "../Footer";
 import { gsap } from "gsap";
 
+import { AboutMeData } from "../../utils/aboutMe";
+
+import BioCard from "../BioCard";
+
 export default function About() {
+
+
+  const [currentBio, setBio] = useState(AboutMeData[0]); 
+
+  
+  const ref = useRef(null);
+
+const handleSetBioCard = (bioId) => {
+  const bio= AboutMeData.find((data) => data.id === bioId);
+  setBio(bio);
+  ref.current.scrollIntoView({ behavior: "smooth" });
+};
+
+
+useEffect(() => {
+  gsap.fromTo(
+    ".cards",
+    { x: 400, opacity: 0 },
+    { x: 0, y: 0, opacity: 1, duration: 1.5, stagger: 0.15 }
+  );
+});
+
+const imageRef=useRef(null);
+
+  useEffect(()=>{
+  const imageElement=imageRef.current;
+  gsap.to(imageElement,{
+    duration:1,
+    opacity:1,
+    ease: "power2.out",
+  });
+}, []);
+
   return (
 <div className=" pb-8 flex flex-wrap justify-center items-start md:items-center md:pt-12 md:pl-8 min-h-screen">
-  <div className="max-h-full bg-gradient-to-b from-blue-300 to-blue-500 rounded-sm w-50 h-100 overflow-hidden mt-5 md:mt-20 md:h-100 md:w-100">
+  <div className="max-h-full bg-gradient-to-b rounded-sm w-50 h-100 overflow-hidden mt-5 md:mt-20 md:h-100 md:w-100">
     <img
+      ref={imageRef}
       src="/GradShot.jpeg"
       alt="myavator"
       className="w-auto max-h-lg rounded-lg "
+      style={{
+        opacity:0,
+        transition:"opacity 1.5s",
+      }}
     />
   </div>
-  <div className="flex-1">
-    
-  </div>
+<div className="flex-1 cards">
+        <div ref={ref}
+        onLoad={()=>handleSetBioCard}
+        >
+          {currentBio && <BioCard bio={currentBio} />}
+        </div>
+      </div>
+      {/* <div><Footer/></div> */}
 </div>
-
   );
 }
 
