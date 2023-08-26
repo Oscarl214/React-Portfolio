@@ -66,9 +66,9 @@ useEffect(() => {
         <div
         >
           {currentBio && <BioCard bio={currentBio} />}
+          <Footer/>
         </div>
       </div>
-      {/* <div><Footer/></div> */}
 </div>
   );
 }

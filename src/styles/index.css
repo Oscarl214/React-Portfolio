@@ -11,11 +11,11 @@
   --card_color: black;
   --text_color: black;
 
-  --clr-1: lime;
-  --clr-2: white;
-  --clr-3: #2d8f85;
-  --clr-4: #429512;
-  --clr-5: #073438;
+  --clr-1: #D4FECC;
+  --clr-2: #A9FF99;
+  --clr-3: #53FF33;
+  --clr-4: #20CC00;
+  --clr-5: #189900;
 }
 
 [data-theme="dark"] {
@@ -112,4 +112,19 @@ p {
   100% {
     --gradient-angle: 360deg;
   }
+}
+
+.links a {
+  color: lime;
+}
+
+.navtabs a {
+  color:lime;
+}
+
+.footer {
+  /* Position the footer at the bottom of the container */
+  position: absolute;
+  bottom: 0;
+  width: 100%; /* Make sure the footer spans the full width */
 }
