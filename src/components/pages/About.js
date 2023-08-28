@@ -49,13 +49,13 @@ useEffect(() => {
 }, [currentBio]);
 
   return (
-<div className=" pb-8 flex  flex-wrap justify-center items-start md:items-center md:pt-12 md:pl-8 min-h-screen">
-<div className="flex w-full md:w-1/2">
+<div className=" pb-8 flex  flex-wrap justify-center items-start md:items-center md:pt-12 md:pl-8  min-h-screen ">
+<div className="flex w-full md:w-1/2  ">
     <img
       ref={imageRef}
       src="/GradShot.jpeg"
       alt="myavator"
-      className="w-auto max-h-lg rounded-lg "
+      className="w-auto max-h-lg rounded-lg pt-20"
       style={{
         opacity:0,
         transition:"opacity 1.5s",
