@@ -128,3 +128,7 @@ p {
   bottom: 0;
   width: 100%; /* Make sure the footer spans the full width */
 }
+.size{
+  max-width: 100%;
+  height:auto;
+}
