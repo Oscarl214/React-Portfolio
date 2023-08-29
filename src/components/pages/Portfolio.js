@@ -36,7 +36,7 @@ export default function Projects() {
           <button
             key={project.id}
             onClick={() => handleSetCurrentProject(project.id)}
-            className=" bg-lime-600 hover:bg-blue-400 text-blue font-bold py-2 px-4 border border-blue-700 rounded "
+            className=" bg-lime-500 hover:bg-blue-400 text-blue font-bold py-2 px-4 border border-blue-700 rounded "
           >
             {project.title}
           </button>
