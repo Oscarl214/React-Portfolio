@@ -11,10 +11,10 @@
   --card_color: black;
   --text_color: black;
 
-  --clr-1: #D4FECC;
-  --clr-2: #A9FF99;
-  --clr-3: #53FF33;
-  --clr-4: #20CC00;
+  --clr-1: #d4fecc;
+  --clr-2: #a9ff99;
+  --clr-3: #53ff33;
+  --clr-4: #20cc00;
   --clr-5: #189900;
 }
 
@@ -39,6 +39,10 @@ body {
 
 button {
   font-family: "Lato", sans-serif;
+}
+
+.navtabs {
+  border: none;
 }
 h1 {
   font-family: "Lato", sans-serif;
@@ -119,7 +123,7 @@ p {
 }
 
 .navtabs a {
-  color:lime;
+  color: lime;
 }
 
 .footer {
@@ -128,7 +132,7 @@ p {
   bottom: 0;
   width: 100%; /* Make sure the footer spans the full width */
 }
-.size{
+.size {
   max-width: 100%;
-  height:auto;
+  height: auto;
 }
