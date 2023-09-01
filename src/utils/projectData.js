@@ -3,7 +3,7 @@ export const projectData = [
     id: 1,
     title: "AR WEBPAGE",
     description:
-      "Designed a mock e-commerce web page utilizing the power of augmented reality (AR) to showcase three different products for a B2C Company of choice.",
+      "Designed a mock e-commerce web page utilizing the power of augmented reality (AR) to showcase three 3D modals of different products for a B2C Company of choice.",
     image:
       "https://portfolioprojectsol.s3.us-east-2.amazonaws.com/WebARProejct.png",
     link: "https://yywb1u.csb.app/",
@@ -87,5 +87,16 @@ export const projectData = [
     github: "https://github.com/Oscarl214/Cohort-Retort",
     technologies:
       "MongoDB, Express.js, React, Node.js,SWS S3 Service,GraphQL,Apollo Server Express,Bycript,Mongoose,TailwindCSS",
+  },
+  {
+    id: 9,
+    title: "O's-Tech-Blog",
+    description:
+      "A Tech Blog site that allows tech users to have a space where they can share anything about Tech. Utilized the MVC framework and further strengthened my understanding of mySQL and CRUD operations.  ",
+    image:
+      "https://portfolioprojectsol.s3.us-east-2.amazonaws.com/TechBlog.png",
+    link: "https://otechblog.herokuapp.com/",
+    github: "https://github.com/Oscarl214/BlogPost/tree/main",
+    technologies: "HTML, HandleBars, Bootstrap, MySQL, Bycript",
   },
 ];

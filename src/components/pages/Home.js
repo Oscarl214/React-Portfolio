@@ -53,16 +53,16 @@ export default function Home() {
         <h2 className=" text-5xl py-2 text-lime-500 font-medium dark:text-teal-400 md:text-6xl">
           Hi, I'm <span className="animate-pulse"> Oscar</span>
         </h2>
-
-        <h3 className="text-2xl py-2 dark:text-white md:text-3xl">
-          Software Developer.
-        </h3>
+        <h3 className="text-2xl pt-3 dark:text-white md:text-3xl">Software</h3>
+        <h3 className="text-2xl text-lime-500 md:text-3xl">Developer</h3>
         <section className="hero">
-          <p className="App-text md py-5 leading-9 max-w-xl mx-auto md:text-x4 font-bold">
+          <p className="App-text md pt-5 leading-9 max-w-xl mx-auto md:text-x4 font-bold">
             Dedicated to creating web applications that solve real world
             problems.
             <br></br>
-            Lets Connect!
+          </p>
+          <p className="App-text md leading-9 max-w-xl mx-auto md:text-x4 font-bold">
+            Lets <span style={{ color: "#4CBB17" }}>Connect!</span>
           </p>
         </section>
       </section>

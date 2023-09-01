@@ -41,9 +41,10 @@ button {
   font-family: "Lato", sans-serif;
 }
 
-.navtabs {
+.nav-tabs {
   border: none;
 }
+
 h1 {
   font-family: "Lato", sans-serif;
   font-weight: 300;
@@ -122,10 +123,13 @@ p {
   color: lime;
 }
 
-.navtabs a {
+.nav-tabs a {
   color: lime;
 }
 
+.nav-tabs {
+  border: none;
+}
 .footer {
   /* Position the footer at the bottom of the container */
   position: absolute;
@@ -135,4 +139,8 @@ p {
 .size {
   max-width: 100%;
   height: auto;
+}
+
+.nav-links {
+  color: lime;
 }
