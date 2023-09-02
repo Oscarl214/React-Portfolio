@@ -131,10 +131,9 @@ p {
   border: none;
 }
 .footer {
-  /* Position the footer at the bottom of the container */
   position: absolute;
   bottom: 0;
-  width: 100%; /* Make sure the footer spans the full width */
+  width: 100%;
 }
 .size {
   max-width: 100%;

@@ -21,16 +21,23 @@ const Footer = () => {
         href="https://www.linkedin.com/in/oscar-l-8371a512a/"
         target="_blank"
         alt="LinkedIn"
+        rel="noreferrer"
       >
         <AiFillLinkedin />
       </a>
-      <a href="https://github.com/Oscarl214" target="_blank" alt="Github">
+      <a
+        href="https://github.com/Oscarl214"
+        target="_blank"
+        alt="Github"
+        rel="noreferrer"
+      >
         <AiFillGithub />
       </a>
       <a
         href="https://drive.google.com/file/d/17-0lqDk_KMBrRq-iD69BnZaCOB8diu4X/view?usp=drive_link"
         target="_blank"
         alt="drive"
+        rel="noreferrer"
       >
         {" "}
         <AiOutlineFileText />

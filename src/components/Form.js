@@ -5,7 +5,6 @@ import { useForm, ValidationError } from "@formspree/react";
 const Form = () => {
   const [emailValue, setEmailValue] = useState("");
   const [messageValue, setMessageValue] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
 
   const [state, handleSubmit] = useForm("xyyqwzvd");
   if (state.succeeded) {
@@ -49,17 +48,6 @@ const Form = () => {
     );
   }
 
-  // const handleFormSubmit = async () => {
-  //   if (emailValue && messageValue) {
-  //     handleSubmit();
-  //   } else {
-  //     setTimeout(() => {
-  //       console.log(
-  //         "Please provide a valid email and message before submitting"
-  //       );
-  //     }, 100);
-  //   }
-  // };
   return (
     <section id="contact" className="relative">
       <div className="container px-5 py-10 mx-auto flex sm:flex-nowrap flex-wrap">
@@ -87,7 +75,10 @@ const Form = () => {
               <h2 className="title-font font-semibold text-white tracking-widest text-xs">
                 EMAIL
               </h2>
-              <a className="text-indigo-400 leading-relaxed">
+              <a
+                className="text-indigo-400 leading-relaxed"
+                href="mailto: lealoscar56@gmail.com"
+              >
                 lealoscar56@gmail.com
               </a>
               <h2 className="title-font font-semibold text-white tracking-widest text-xs mt-4">
@@ -113,17 +104,6 @@ const Form = () => {
             Send me a message to connect! I will response as soon as I can!
           </p>
           <input type="hidden" name="form-name" value="contact" />
-          {/* <div className="relative mb-4">
-            <label htmlFor="name" className="leading-7 text-lg">
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-            />
-          </div> */}
           <div className="relative mb-4">
             <label htmlFor="email" className="leading-7 text-lg">
               Email

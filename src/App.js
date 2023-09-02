@@ -1,8 +1,7 @@
 import React from "react";
 import PortfolioContainer from "./components/PortfolioContainer";
 import "./styles/app.css";
-import { useState, useEffect } from "react";
-import Footer from "./components/Footer";
+
 const App = () => (
   <div className="App-header">
     <PortfolioContainer />

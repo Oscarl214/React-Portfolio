@@ -1,9 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import "../../styles/app.css";
 import Footer from "../Footer";
 
-import { videoData } from "../../utils/homeutils";
 export default function Home() {
   useEffect(() => {
     const hero = document.querySelector(".hero");
