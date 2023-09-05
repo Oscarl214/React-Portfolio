@@ -36,4 +36,4 @@
 
 ## Deployed Link
 
-https://o-react-portfolio.netlify.app
+[https://o-react-portfolio.netlify.app](https://o-site.netlify.app/)https://o-site.netlify.app/
