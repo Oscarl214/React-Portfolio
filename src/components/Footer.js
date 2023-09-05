@@ -34,7 +34,7 @@ const Footer = () => {
         <AiFillGithub />
       </a>
       <a
-        href="https://drive.google.com/file/d/17-0lqDk_KMBrRq-iD69BnZaCOB8diu4X/view?usp=drive_link"
+        href="https://drive.google.com/file/d/17dgElHASzvg9nG9uot6GNuzCOUBQ9XFx/view?usp=sharing"
         target="_blank"
         alt="drive"
         rel="noreferrer"

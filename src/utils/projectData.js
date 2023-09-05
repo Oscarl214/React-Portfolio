@@ -18,7 +18,7 @@ export const projectData = [
       "A collobaritive project where we developed a front-end webpage that allows users to search for birds and receive fun facts, bird sounds, and images via fetching to two remote repositories.",
     image:
       "https://portfolioprojectsol.s3.us-east-2.amazonaws.com/BirdSite.png",
-    link: "",
+    link: "https://oscarl214.github.io/Bird_Project/",
     github: "https://github.com/Oscarl214/Bird_Project",
     technologies: "HTML, CSS, JavaScript, Bulma",
   },
@@ -29,7 +29,7 @@ export const projectData = [
       "Simple weather application that allows a user to search for a city of their choice to be able to receive the current weather and a five day forecast. Utilizes an open WeatherApi to fetch data from.",
     image:
       "https://portfolioprojectsol.s3.us-east-2.amazonaws.com/Weather_App.png",
-    link: "",
+    link: "https://oscarl214.github.io/weather_App/",
     github: "https://github.com/Oscarl214/weather_App",
     technologies: "HTML, CSS, JavaScript",
   },
