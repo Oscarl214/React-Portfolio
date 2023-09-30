@@ -1,13 +1,12 @@
-import React, { useState } from "react";
-import "../styles/app.css";
-import { useForm, ValidationError } from "@formspree/react";
+import React, { useState } from 'react';
+import '../styles/app.css';
+import { useForm, ValidationError } from '@formspree/react';
 
 const Form = () => {
-  const [emailValue, setEmailValue] = useState("");
-  const [messageValue, setMessageValue] = useState("");
-  ``;
+  const [emailValue, setEmailValue] = useState('');
+  const [messageValue, setMessageValue] = useState('');
 
-  const [state, handleSubmit] = useForm("xyyqwzvd");
+  const [state, handleSubmit] = useForm('xyyqwzvd');
   if (state.succeeded) {
     return (
       <div className="nav-container">
@@ -58,7 +57,7 @@ const Form = () => {
             height="100%"
             title="map"
             className="absolute inset-0"
-            style={{ filter: "opacity(0.7)" }}
+            style={{ filter: 'opacity(0.7)' }}
             src="https://www.google.com/maps/embed/v1/place?q=Dallas,+TX,+USA&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
           />
 
