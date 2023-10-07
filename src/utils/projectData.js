@@ -116,11 +116,9 @@ export const projectData = [
     title: 'Travel Journal',
     description:
       'A personal digital travel journal that documents every country Ive been, with the options to view a gallery for each country. I am a traveler at heart so I decided to develop this application to keep track. ',
-    image:
-      'https://portfolioprojectsol.s3.us-east-2.amazonaws.com/UI.png',
+    image: 'https://portfolioprojectsol.s3.us-east-2.amazonaws.com/UI.png',
     link: 'https://ostravel-journal.netlify.app/',
     github: 'https://github.com/Oscarl214/TravelJournal',
-    technologies:
-      'React, JavaScript, CSS, Tailwind ',
+    technologies: 'React, JavaScript, CSS, Tailwind ',
   },
 ];

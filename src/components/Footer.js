@@ -1,15 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 import {
   AiFillGithub,
   AiFillLinkedin,
   AiOutlineFileText,
-} from "react-icons/ai";
-import { gsap } from "gsap";
+} from 'react-icons/ai';
+import { gsap } from 'gsap';
 
 const Footer = () => {
   useEffect(() => {
     gsap.fromTo(
-      ".links",
+      '.links',
       { x: -400, opacity: 0 },
       { x: 0, y: 0, opacity: 1, duration: 1.25, stagger: 0.15 }
     );
@@ -34,12 +34,12 @@ const Footer = () => {
         <AiFillGithub />
       </a>
       <a
-        href="https://drive.google.com/file/d/17dgElHASzvg9nG9uot6GNuzCOUBQ9XFx/view?usp=sharing"
+        href="https://drive.google.com/file/d/11gU35QzXitGPqcjVjn9fqxWqJb7qwqmJ/view?usp=sharing"
         target="_blank"
         alt="drive"
         rel="noreferrer"
       >
-        {" "}
+        {' '}
         <AiOutlineFileText />
       </a>
     </div>
