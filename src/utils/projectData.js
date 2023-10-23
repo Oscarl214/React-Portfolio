@@ -121,4 +121,14 @@ export const projectData = [
     github: 'https://github.com/Oscarl214/TravelJournal',
     technologies: 'React, JavaScript, CSS, Tailwind ',
   },
+  {
+    id: 12,
+    title: 'Familys Christmas List',
+    description:
+      'A personalized Christmas directory, thoughtfully designed to streamline the process of consolidating everyones holiday wish lists into a single, easily accessible platform for our familys convenience. This project presented a stimulating opportunity for me to delve into Next.js and TypeScript, all while harnessing the power of GraphQL and Apollo Server to create a seamless solution. ',
+    image: 'https://portfolioprojectsol.s3.us-east-2.amazonaws.com/Christmas-list.png',
+    link: 'https://christmas-list-x5fy.vercel.app/',
+    github: 'https://github.com/Oscarl214/Christmas-List/tree/main',
+    technologies: 'NextJs, React, TypeScript, GraphQl, Apollo, Tailwind ',
+  },
 ];
