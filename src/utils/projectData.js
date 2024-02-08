@@ -123,6 +123,17 @@ export const projectData = [
   },
   {
     id: 12,
+    title: 'Familys Christmas List',
+    description:
+      'A personalized Christmas directory, thoughtfully designed to streamline the process of consolidating everyones holiday wish lists into a single, easily accessible platform for our familys convenience. This project presented a stimulating opportunity for me to delve into Next.js and TypeScript, all while harnessing the power of GraphQL and Apollo Server to create a seamless solution. ',
+    image:
+      'https://portfolioprojectsol.s3.us-east-2.amazonaws.com/Christmas-list.png',
+    link: 'https://christmas-list-x5fy.vercel.app/',
+    github: 'https://github.com/Oscarl214/Christmas-List/tree/main',
+    technologies: 'NextJs, React, TypeScript, GraphQl, Apollo, Tailwind ',
+  },
+  {
+    id: 13,
     title: 'Yard Service Site',
     description:
       'This project is a modern web application built using React, TypeScript and Next.js, with styling done using Tailwind CSS. The site is fully responsive and can adapt to both desktop and mobile. It serves as a comprehensive online platform for a lawn care service, featuring a range of static pages. The site serves as a way for my client to show off his lawn services and to have a method for customers to contact him. ',
